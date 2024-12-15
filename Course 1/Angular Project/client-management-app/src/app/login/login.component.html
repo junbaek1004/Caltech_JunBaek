@@ -1,0 +1,15 @@
+<header>Welcome to JB Management App!</header>
+
+<div>
+<section class="login">
+    <h2>Login</h2>
+    <form [formGroup]="loginRef" (ngSubmit)="checkLoginDetails()" id="login-form">
+      <label for="login-email">Email:</label>
+      <input type="email" formControlName="emailid" name="login-email" id="login-email" required/>
+      <label for="login-pw">Password:</label>
+      <input type="password" formControlName="password" id="login-pw" required/>
+      <button type="submit">Login</button>
+    </form>
+    <a routerLink="/register">Sign Up Here</a>
+</section>
+</div>

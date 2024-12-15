@@ -1,0 +1,15 @@
+<header>
+    <h1>Welcome User {{ user }}</h1>
+</header>
+
+<main>
+    <section class="dashboard-options">
+        <h2>What would you like to do?</h2>
+
+        <button routerLink="/add_client">Add Client</button>
+        <button routerLink="/view_clients">View Clients</button>
+        <button routerLink="/add_meeting">Add Meeting</button>
+        <button routerLink="/schedules">View Schedules</button>
+        <button (click)="logout()">Logout</button>
+    </section>
+</main>

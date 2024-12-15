@@ -1,0 +1,22 @@
+<div>
+    <h2>Meeting Schedules</h2>
+    <table *ngIf="meetings.length > 0">
+       <thead>
+        <tr>
+            <th>Client Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Topic</th>
+        </tr>
+       </thead> 
+       <tbody>
+        <tr *ngFor="let meeting of meetings">
+            <td>{{meeting.clientName}}</td>
+            <td>{{meeting.date}}</td>
+            <td>{{meeting.time}}</td>
+            <td>{{meeting.purpose}}</td>
+        </tr>
+       </tbody>
+    </table>
+    <button (click)="goToDashboard()">Go to Dashboard</button>
+</div>

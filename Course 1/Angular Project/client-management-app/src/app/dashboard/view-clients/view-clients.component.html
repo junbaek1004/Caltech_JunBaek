@@ -1,0 +1,22 @@
+<div>
+    <h2>All Clients</h2>
+    <table *ngIf="clients.length > 0">
+       <thead>
+        <tr>
+            <th>Client Name</th>
+            <th>Client Email</th>
+            <th>Client Type</th>
+            <th>Memo</th>
+        </tr>
+       </thead> 
+       <tbody>
+        <tr *ngFor="let client of clients">
+            <td>{{client.name}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.type}}</td>
+            <td>{{client.memo}}</td>
+        </tr>
+       </tbody>
+    </table>
+    <button (click)="goToDashboard()">Go to Dashboard</button>
+</div>

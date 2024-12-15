@@ -1,0 +1,14 @@
+<div>
+<section class="register">
+    <h2>Don't have an account? Register here!</h2>
+    <form (ngSubmit)="onRegister()" >
+      <label for="register-name">Name:</label>
+      <input type="text" name="register-name" id="register-name" [(ngModel)]="name" placeholder="John Doe" required/>
+      <label for="register-email">Email:</label>
+      <input type="email" name="register-email" id="register-email" [(ngModel)]="email" placeholder="123@gmail.com" required/>
+      <label for="register-pw">Password</label>
+      <input type="password" id="register-pw" name="register-pw" [(ngModel)]="password" required/>
+      <button type="submit">Register Now</button>
+    </form>
+</section>
+</div>

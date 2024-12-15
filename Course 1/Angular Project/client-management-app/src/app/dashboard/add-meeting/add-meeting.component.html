@@ -1,0 +1,19 @@
+<div>
+    <h2>Add Meeting With Client</h2>
+    <form (ngSubmit)="onSubmit()">
+        <label for="client-name">Client Name:</label>
+        <input type="text" name="client-name" id="client-name" [(ngModel)]="meeting.clientName" required/><br/>
+        
+        <label for="meeting-date">Meeting Date:</label>
+        <input type="date" name="meeting-date" id="meeting-date" [(ngModel)]="meeting.date" required><br/>      <!--getting date format error in console-->
+
+        <label for="meeting-time">Meeting Time:</label>
+        <input type="time" name="meeting-time" id="meeting-time" [(ngModel)]="meeting.time" required><br/>
+
+        <label for="meeting-purpose">Meeting Topic:</label>
+        <textarea name="meeting-purpose" id="meeting-purpose" rows="3" cols="20" placeholder="Meeting topic is..." [(ngModel)]="meeting.purpose"></textarea><br/>
+
+        <button type="submit">Add Meeting</button>
+    </form>
+    <button (click)="goToDashboard()">Go to Dashboard</button>
+</div>
