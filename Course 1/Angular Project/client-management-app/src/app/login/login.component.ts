@@ -17,11 +17,7 @@ export class LoginComponent {
 
   constructor(public ls:LoginService, public router:Router) { }
 
-  ngOnInit(): void {
-    // Set the sessionStorage values for testing
-    sessionStorage.setItem('registeredEmail', 'test@example.com');
-    sessionStorage.setItem('registeredPassword', 'password123');
-  }
+
 checkLoginDetails(): void {
   let login = this.loginRef.value;
   console.log(login);
