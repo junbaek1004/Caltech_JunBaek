@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                
+                echo 'Checked out source code from GitHub'
+            }
+        }
+
+        stage('Build & Deploy') {
+            steps {
+                dir('Course 4/course4endproject') {
+                    echo 'Running Maven Build'
+                    sh 'mvn clean package'
+
+                    echo 'Running Docker Compose'
+                    sh 'docker-compose down || true'
+                    sh 'docker-compose up --build -d'
+                }
+            }
+        }
+    }
+}
